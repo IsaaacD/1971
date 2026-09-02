@@ -2,10 +2,11 @@ import { useRef, useEffect, useState } from 'react'
 import InteractiveLineChart from './InteractiveLineChart'
 import { useData } from '../hooks/useData'
 
-export default function ChartSection({ dataFile, title, source, fredIds = [], description = '' }) {
+export default function ChartSection({ dataFile, imageFile, title, source, fredIds = [], description = '' }) {
   const [revealed, setRevealed] = useState(false)
   const [interactive, setInteractive] = useState(false)
   const [descOpen, setDescOpen] = useState(false)
+  const [showImage, setShowImage] = useState(false)
   const { data, loading, error, ref } = useData(dataFile, true)
 
   useEffect(() => {
@@ -49,8 +50,36 @@ export default function ChartSection({ dataFile, title, source, fredIds = [], de
 
       {data && !loading && (
         <>
-          <InteractiveLineChart data={data} interactive={interactive} />
+          {showImage && imageFile ? (
+            <div className="original-image-wrap">
+              <img src={imageFile} alt={title} className="original-image" />
+            </div>
+          ) : (
+            <InteractiveLineChart data={data} interactive={interactive} />
+          )}
+          <div className="section-toggles">
+            {imageFile && (
+              <button
+                className="image-toggle"
+                onClick={() => setShowImage(prev => !prev)}
+                aria-pressed={showImage}
+              >
+                {showImage ? 'Chart' : 'Original'}
+              </button>
+            )}
 
+          </div>
+          {/* <div className="section-toggles">
+            {!showImage && (
+              <button
+                className="interactive-toggle"
+                onClick={() => setInteractive(prev => !prev)}
+                aria-pressed={interactive}
+              >
+                {interactive ? 'Static' : 'Interactive'}
+              </button>
+            )}
+          </div> */}
           {source && <div className="source-attribution">Source: {source}</div>}
           {data.unit && <div className="unit-label">Unit: {data.unit}</div>}
 
@@ -73,14 +102,6 @@ export default function ChartSection({ dataFile, title, source, fredIds = [], de
           </div>
         </>
       )}
-
-      <button
-        className="interactive-toggle"
-        onClick={() => setInteractive(prev => !prev)}
-        aria-pressed={interactive}
-      >
-        {interactive ? 'Static' : 'Interactive'}
-      </button>
     </section>
   )
 }

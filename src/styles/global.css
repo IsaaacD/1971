@@ -301,6 +301,51 @@ body {
   opacity: 1;
 }
 
+/* Section Toggles Row */
+.section-toggles {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.image-toggle {
+  display: block;
+  padding: 6px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, opacity 0.2s;
+  opacity: 0.6;
+}
+
+.image-toggle:hover {
+  opacity: 1;
+}
+
+.image-toggle[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* Original Image */
+.original-image-wrap {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.original-image {
+  width: 860px;
+  height: 420px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .site-title {

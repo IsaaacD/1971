@@ -6,6 +6,7 @@ import ChartSection from './components/ChartSection'
 const chartSections = [
   {
     dataFile: 'data/wage-productivity.json',
+    imageFile: 'images/01-pay-and-productivity.png',
     title: 'Wages vs. Productivity',
     source: 'BLS, FRED',
     fredIds: ['OPHNFB', 'COMPRNFB'],
@@ -13,6 +14,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/gdp-per-capita.json',
+    imageFile: 'images/05-share-of-gross-domestic-income.png',
     title: 'Real GDP Per Capita',
     source: 'FRED (BEA)',
     fredIds: ['A939RX0Q048SBEA'],
@@ -20,6 +22,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/federal-debt.json',
+    imageFile: 'images/35-fed-deficit-vs-gdp.png',
     title: 'Federal Debt as % of GDP',
     source: 'FRED',
     fredIds: ['GFDGDPA188S'],
@@ -27,6 +30,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/inflation.json',
+    imageFile: 'images/15-cummulative-inflation.png',
     title: 'Consumer Price Index (Inflation)',
     source: 'BLS, FRED',
     fredIds: ['CPIAUCSL'],
@@ -34,6 +38,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/gini-coefficient.json',
+    imageFile: 'images/08-gini.png',
     title: 'Income Inequality (Gini Coefficient)',
     source: 'Census Bureau, FRED',
     fredIds: ['SIPOVGINIUSA'],
@@ -48,6 +53,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/savings-rate.json',
+    imageFile: 'images/45-savingsrate.jpg',
     title: 'Personal Savings Rate',
     source: 'BEA, FRED',
     fredIds: ['PSAVERT'],
@@ -55,6 +61,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/stock-market.json',
+    imageFile: 'images/40-sp-500-pe-ratio.jpg',
     title: 'Stock Market (S&P 500) vs. Wages',
     source: 'FRED, BLS',
     fredIds: ['SP500', 'AHETPI'],
@@ -62,6 +69,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/trade-deficit.json',
+    imageFile: 'images/48-tradebalance1.jpg',
     title: 'Trade Balance',
     source: 'BEA, FRED',
     fredIds: ['NETEXP'],
@@ -69,6 +77,7 @@ const chartSections = [
   },
   {
     dataFile: 'data/housing-affordability.json',
+    imageFile: 'images/20-home-prices-amsterdam.png',
     title: 'Housing Affordability',
     source: 'FRED, Census',
     fredIds: ['USSTHPI'],
@@ -112,6 +121,7 @@ function AppContent() {
           <ChartSection
             key={i}
             dataFile={section.dataFile}
+            imageFile={section.imageFile}
             title={section.title}
             source={section.source}
             fredIds={section.fredIds || []}
