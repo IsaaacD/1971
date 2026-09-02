@@ -339,7 +339,7 @@ body {
 }
 
 .original-image {
-  width: 860px;
+  width: 100%;
   height: 420px;
   object-fit: contain;
   border-radius: 8px;
