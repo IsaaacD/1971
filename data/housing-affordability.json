@@ -1,0 +1,32 @@
+{
+  "title": "Housing Affordability",
+  "unit": "Index (1971=100; higher=less affordable)",
+  "series": [
+    {
+      "name": "Median Home Price / Median Income",
+      "color": "#e67e22",
+      "values": [
+        {"year": 1950, "value": 55}, {"year": 1955, "value": 58}, {"year": 1960, "value": 60},
+        {"year": 1965, "value": 68}, {"year": 1970, "value": 88}, {"year": 1971, "value": 100},
+        {"year": 1972, "value": 102}, {"year": 1973, "value": 106}, {"year": 1974, "value": 104},
+        {"year": 1975, "value": 100}, {"year": 1976, "value": 103}, {"year": 1977, "value": 107},
+        {"year": 1978, "value": 110}, {"year": 1979, "value": 113}, {"year": 1980, "value": 118},
+        {"year": 1981, "value": 122}, {"year": 1982, "value": 118}, {"year": 1983, "value": 115},
+        {"year": 1984, "value": 118}, {"year": 1985, "value": 115}, {"year": 1986, "value": 113},
+        {"year": 1987, "value": 115}, {"year": 1988, "value": 120}, {"year": 1989, "value": 118},
+        {"year": 1990, "value": 115}, {"year": 1991, "value": 113}, {"year": 1992, "value": 112},
+        {"year": 1993, "value": 113}, {"year": 1994, "value": 115}, {"year": 1995, "value": 118},
+        {"year": 1996, "value": 122}, {"year": 1997, "value": 125}, {"year": 1998, "value": 128},
+        {"year": 1999, "value": 132}, {"year": 2000, "value": 138}, {"year": 2001, "value": 145},
+        {"year": 2002, "value": 155}, {"year": 2003, "value": 165}, {"year": 2004, "value": 178},
+        {"year": 2005, "value": 188}, {"year": 2006, "value": 190}, {"year": 2007, "value": 182},
+        {"year": 2008, "value": 165}, {"year": 2009, "value": 148}, {"year": 2010, "value": 140},
+        {"year": 2011, "value": 132}, {"year": 2012, "value": 128}, {"year": 2013, "value": 135},
+        {"year": 2014, "value": 142}, {"year": 2015, "value": 148}, {"year": 2016, "value": 152},
+        {"year": 2017, "value": 158}, {"year": 2018, "value": 162}, {"year": 2019, "value": 168},
+        {"year": 2020, "value": 178}, {"year": 2021, "value": 195}, {"year": 2022, "value": 200},
+        {"year": 2023, "value": 205}, {"year": 2024, "value": 210}
+      ]
+    }
+  ]
+}
