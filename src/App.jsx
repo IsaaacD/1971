@@ -7,52 +7,62 @@ const chartSections = [
   {
     dataFile: '/data/wage-productivity.json',
     title: 'Wages vs. Productivity',
-    source: 'BLS, FRED'
+    source: 'BLS, FRED',
+    fredIds: ['OPHNFB', 'COMPRNFB']
   },
   {
     dataFile: '/data/gdp-per-capita.json',
     title: 'Real GDP Per Capita',
-    source: 'FRED (BEA)'
+    source: 'FRED (BEA)',
+    fredIds: ['A939RX0Q048SBEA']
   },
   {
     dataFile: '/data/federal-debt.json',
     title: 'Federal Debt as % of GDP',
-    source: 'FRED'
+    source: 'FRED',
+    fredIds: ['GFDGDPA188S']
   },
   {
     dataFile: '/data/inflation.json',
     title: 'Consumer Price Index (Inflation)',
-    source: 'BLS, FRED'
+    source: 'BLS, FRED',
+    fredIds: ['CPIAUCSL']
   },
   {
     dataFile: '/data/gini-coefficient.json',
     title: 'Income Inequality (Gini Coefficient)',
-    source: 'Census Bureau, FRED'
+    source: 'Census Bureau, FRED',
+    fredIds: ['SIPOVGINIUSA']
   },
   {
     dataFile: '/data/corporate-tax.json',
     title: 'Top Marginal Tax Rates',
-    source: 'Tax Foundation, FRED'
+    source: 'Tax Foundation, FRED',
+    fredIds: ['IITTRHB']
   },
   {
     dataFile: '/data/savings-rate.json',
     title: 'Personal Savings Rate',
-    source: 'BEA, FRED'
+    source: 'BEA, FRED',
+    fredIds: ['PSAVERT']
   },
   {
     dataFile: '/data/stock-market.json',
     title: 'Stock Market (S&P 500) vs. Wages',
-    source: 'FRED, BLS'
+    source: 'FRED, BLS',
+    fredIds: ['SP500', 'AHETPI']
   },
   {
     dataFile: '/data/trade-deficit.json',
     title: 'Trade Balance',
-    source: 'BEA, FRED'
+    source: 'BEA, FRED',
+    fredIds: ['NETEXP']
   },
   {
     dataFile: '/data/housing-affordability.json',
     title: 'Housing Affordability',
-    source: 'FRED, Census'
+    source: 'FRED, Census',
+    fredIds: ['USSTHPI']
   }
 ]
 
@@ -88,6 +98,7 @@ function AppContent() {
             dataFile={section.dataFile}
             title={section.title}
             source={section.source}
+            fredIds={section.fredIds || []}
           />
         ))}
       </main>

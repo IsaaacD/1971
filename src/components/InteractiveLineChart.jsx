@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, useCallback } from 'react'
 import * as d3 from 'd3'
 import { useTheme } from '../styles/ThemeContext'
 
-export default function InteractiveLineChart({ data, width, height }) {
+export default function InteractiveLineChart({ data, width, height, interactive = false }) {
   const svgRef = useRef(null)
   const containerRef = useRef(null)
   const zoomBehaviorRef = useRef(null)
@@ -33,6 +33,8 @@ export default function InteractiveLineChart({ data, width, height }) {
 
     const svg = d3.select(svgRef.current)
     svg.selectAll('*').remove()
+
+
 
     const g = svg.append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`)
@@ -172,46 +174,49 @@ export default function InteractiveLineChart({ data, width, height }) {
       .attr('stroke', textColor)
       .attr('stroke-opacity', 0.2)
 
-    const zoom = d3.zoom()
-      .scaleExtent([1, 8])
-      .translateExtent([[0, 0], [innerW, innerH]])
-      .extent([[0, 0], [innerW, innerH]])
-      .on('zoom', (event) => {
-        const newX = event.transform.rescaleX(x)
+    // Only enable zoom in interactive mode
+    if (interactive) {
+      const zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .translateExtent([[0, 0], [innerW, innerH]])
+        .extent([[0, 0], [innerW, innerH]])
+        .on('zoom', (event) => {
+          const newX = event.transform.rescaleX(x)
 
-        g.select('.x-axis').call(
-          d3.axisBottom(newX).ticks(10).tickFormat(d3.format('d'))
-        )
-        g.selectAll('.x-axis text')
-          .attr('fill', textColor)
-          .attr('font-size', '11px')
-
-        chartArea.selectAll('path')
-          .attr('d', d3.line()
-            .x(d => newX(d.year))
-            .y(d => y(d.value))
-            .curve(d3.curveMonotoneX)
+          g.select('.x-axis').call(
+            d3.axisBottom(newX).ticks(10).tickFormat(d3.format('d'))
           )
+          g.selectAll('.x-axis text')
+            .attr('fill', textColor)
+            .attr('font-size', '11px')
 
-        chartArea.selectAll('circle')
-          .attr('cx', d => newX(d.year))
-          .attr('cy', d => y(d.value))
+          chartArea.selectAll('path')
+            .attr('d', d3.line()
+              .x(d => newX(d.year))
+              .y(d => y(d.value))
+              .curve(d3.curveMonotoneX)
+            )
 
-        g.select('.marker-1971')
-          .attr('x1', newX(year1971))
-          .attr('x2', newX(year1971))
+          chartArea.selectAll('circle')
+            .attr('cx', d => newX(d.year))
+            .attr('cy', d => y(d.value))
 
-        g.select('.marker-1971-label')
-          .attr('x', newX(year1971) + 6)
-      })
+          g.select('.marker-1971')
+            .attr('x1', newX(year1971))
+            .attr('x2', newX(year1971))
 
-    svg.call(zoom)
-    zoomBehaviorRef.current = zoom
+          g.select('.marker-1971-label')
+            .attr('x', newX(year1971) + 6)
+        })
+
+      svg.call(zoom)
+      zoomBehaviorRef.current = zoom
+    }
 
     return () => {
       zoomBehaviorRef.current = null
     }
-  }, [data, hiddenSeries, theme])
+  }, [data, hiddenSeries, theme, interactive])
 
   const toggleSeries = (name) => {
     setHiddenSeries(prev =>
@@ -228,7 +233,7 @@ export default function InteractiveLineChart({ data, width, height }) {
         width={W}
         height={H}
         viewBox={`0 0 ${W} ${H}`}
-        style={{ maxWidth: '100%', height: 'auto' }}
+        style={{ maxWidth: '100%', height: 'auto', cursor: interactive ? 'grab' : 'default' }}
       />
 
       {tooltip && (
@@ -254,6 +259,7 @@ export default function InteractiveLineChart({ data, width, height }) {
               type="checkbox"
               checked={!hiddenSeries.includes(series.name)}
               onChange={() => toggleSeries(series.name)}
+              disabled={!interactive}
             />
             <span style={{ display: 'inline-block', width: 12, height: 12, backgroundColor: series.color, marginRight: 4, borderRadius: 2 }} />
             {series.name}
@@ -261,9 +267,11 @@ export default function InteractiveLineChart({ data, width, height }) {
         ))}
       </div>
 
-      <button className="zoom-reset" onClick={resetZoom} title="Reset zoom">
-        Reset Zoom
-      </button>
+      {interactive && (
+        <button className="zoom-reset" onClick={resetZoom} title="Reset zoom">
+          Reset Zoom
+        </button>
+      )}
     </div>
   )
 }

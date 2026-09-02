@@ -1,31 +1,331 @@
 {
-  "title": "Consumer Price Index",
+  "title": "Consumer Price Index (Inflation)",
   "unit": "Index (1971=100)",
   "series": [
     {
-      "name": "CPI",
+      "name": "CPI All Items",
       "color": "#e67e22",
       "values": [
-        {"year": 1950, "value": 23}, {"year": 1955, "value": 26}, {"year": 1960, "value": 29},
-        {"year": 1965, "value": 32}, {"year": 1970, "value": 85}, {"year": 1971, "value": 100},
-        {"year": 1972, "value": 103}, {"year": 1973, "value": 108}, {"year": 1974, "value": 117},
-        {"year": 1975, "value": 127}, {"year": 1976, "value": 133}, {"year": 1977, "value": 140},
-        {"year": 1978, "value": 148}, {"year": 1979, "value": 160}, {"year": 1980, "value": 180},
-        {"year": 1981, "value": 200}, {"year": 1982, "value": 211}, {"year": 1983, "value": 219},
-        {"year": 1984, "value": 229}, {"year": 1985, "value": 235}, {"year": 1986, "value": 240},
-        {"year": 1987, "value": 244}, {"year": 1988, "value": 250}, {"year": 1989, "value": 255},
-        {"year": 1990, "value": 261}, {"year": 1991, "value": 266}, {"year": 1992, "value": 271},
-        {"year": 1993, "value": 276}, {"year": 1994, "value": 280}, {"year": 1995, "value": 284},
-        {"year": 1996, "value": 287}, {"year": 1997, "value": 290}, {"year": 1998, "value": 292},
-        {"year": 1999, "value": 296}, {"year": 2000, "value": 300}, {"year": 2001, "value": 304},
-        {"year": 2002, "value": 308}, {"year": 2003, "value": 313}, {"year": 2004, "value": 320},
-        {"year": 2005, "value": 330}, {"year": 2006, "value": 335}, {"year": 2007, "value": 340},
-        {"year": 2008, "value": 352}, {"year": 2009, "value": 356}, {"year": 2010, "value": 362},
-        {"year": 2011, "value": 370}, {"year": 2012, "value": 374}, {"year": 2013, "value": 378},
-        {"year": 2014, "value": 381}, {"year": 2015, "value": 381}, {"year": 2016, "value": 383},
-        {"year": 2017, "value": 387}, {"year": 2018, "value": 392}, {"year": 2019, "value": 395},
-        {"year": 2020, "value": 397}, {"year": 2021, "value": 413}, {"year": 2022, "value": 438},
-        {"year": 2023, "value": 445}, {"year": 2024, "value": 452}
+        {
+          "year": 1947,
+          "value": 55.2
+        },
+        {
+          "year": 1948,
+          "value": 59.4
+        },
+        {
+          "year": 1949,
+          "value": 58.8
+        },
+        {
+          "year": 1950,
+          "value": 59.4
+        },
+        {
+          "year": 1951,
+          "value": 64.2
+        },
+        {
+          "year": 1952,
+          "value": 65.6
+        },
+        {
+          "year": 1953,
+          "value": 66.1
+        },
+        {
+          "year": 1954,
+          "value": 66.4
+        },
+        {
+          "year": 1955,
+          "value": 66.2
+        },
+        {
+          "year": 1956,
+          "value": 67.2
+        },
+        {
+          "year": 1957,
+          "value": 69.4
+        },
+        {
+          "year": 1958,
+          "value": 71.3
+        },
+        {
+          "year": 1959,
+          "value": 72
+        },
+        {
+          "year": 1960,
+          "value": 73.1
+        },
+        {
+          "year": 1961,
+          "value": 73.9
+        },
+        {
+          "year": 1962,
+          "value": 74.7
+        },
+        {
+          "year": 1963,
+          "value": 75.7
+        },
+        {
+          "year": 1964,
+          "value": 76.7
+        },
+        {
+          "year": 1965,
+          "value": 77.9
+        },
+        {
+          "year": 1966,
+          "value": 80.2
+        },
+        {
+          "year": 1967,
+          "value": 82.4
+        },
+        {
+          "year": 1968,
+          "value": 85.9
+        },
+        {
+          "year": 1969,
+          "value": 90.6
+        },
+        {
+          "year": 1970,
+          "value": 95.9
+        },
+        {
+          "year": 1971,
+          "value": 100
+        },
+        {
+          "year": 1972,
+          "value": 103.3
+        },
+        {
+          "year": 1973,
+          "value": 109.7
+        },
+        {
+          "year": 1974,
+          "value": 121.8
+        },
+        {
+          "year": 1975,
+          "value": 133
+        },
+        {
+          "year": 1976,
+          "value": 140.6
+        },
+        {
+          "year": 1977,
+          "value": 149.7
+        },
+        {
+          "year": 1978,
+          "value": 161.2
+        },
+        {
+          "year": 1979,
+          "value": 179.3
+        },
+        {
+          "year": 1980,
+          "value": 203.5
+        },
+        {
+          "year": 1981,
+          "value": 224.6
+        },
+        {
+          "year": 1982,
+          "value": 238.5
+        },
+        {
+          "year": 1983,
+          "value": 246
+        },
+        {
+          "year": 1984,
+          "value": 256.7
+        },
+        {
+          "year": 1985,
+          "value": 265.8
+        },
+        {
+          "year": 1986,
+          "value": 271
+        },
+        {
+          "year": 1987,
+          "value": 280.7
+        },
+        {
+          "year": 1988,
+          "value": 292.2
+        },
+        {
+          "year": 1989,
+          "value": 306.2
+        },
+        {
+          "year": 1990,
+          "value": 322.7
+        },
+        {
+          "year": 1991,
+          "value": 336.4
+        },
+        {
+          "year": 1992,
+          "value": 346.6
+        },
+        {
+          "year": 1993,
+          "value": 356.9
+        },
+        {
+          "year": 1994,
+          "value": 366.1
+        },
+        {
+          "year": 1995,
+          "value": 376.4
+        },
+        {
+          "year": 1996,
+          "value": 387.5
+        },
+        {
+          "year": 1997,
+          "value": 396.5
+        },
+        {
+          "year": 1998,
+          "value": 402.7
+        },
+        {
+          "year": 1999,
+          "value": 411.5
+        },
+        {
+          "year": 2000,
+          "value": 425.3
+        },
+        {
+          "year": 2001,
+          "value": 437.3
+        },
+        {
+          "year": 2002,
+          "value": 444.3
+        },
+        {
+          "year": 2003,
+          "value": 454.5
+        },
+        {
+          "year": 2004,
+          "value": 466.6
+        },
+        {
+          "year": 2005,
+          "value": 482.3
+        },
+        {
+          "year": 2006,
+          "value": 497.9
+        },
+        {
+          "year": 2007,
+          "value": 512.2
+        },
+        {
+          "year": 2008,
+          "value": 531.7
+        },
+        {
+          "year": 2009,
+          "value": 530
+        },
+        {
+          "year": 2010,
+          "value": 538.7
+        },
+        {
+          "year": 2011,
+          "value": 555.6
+        },
+        {
+          "year": 2012,
+          "value": 567.1
+        },
+        {
+          "year": 2013,
+          "value": 575.4
+        },
+        {
+          "year": 2014,
+          "value": 584.7
+        },
+        {
+          "year": 2015,
+          "value": 585.4
+        },
+        {
+          "year": 2016,
+          "value": 592.8
+        },
+        {
+          "year": 2017,
+          "value": 605.5
+        },
+        {
+          "year": 2018,
+          "value": 620.3
+        },
+        {
+          "year": 2019,
+          "value": 631.5
+        },
+        {
+          "year": 2020,
+          "value": 639.4
+        },
+        {
+          "year": 2021,
+          "value": 669.3
+        },
+        {
+          "year": 2022,
+          "value": 722.8
+        },
+        {
+          "year": 2023,
+          "value": 752.7
+        },
+        {
+          "year": 2024,
+          "value": 774.9
+        },
+        {
+          "year": 2025,
+          "value": 795.3
+        },
+        {
+          "year": 2026,
+          "value": 817.3
+        }
       ]
     }
   ]
