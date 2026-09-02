@@ -135,11 +135,6 @@ body {
 .arrow-icon {
   display: inline-block;
   font-size: 0.65rem;
-  transition: transform 0.2s;
-}
-
-.arrow-icon.open {
-  transform: rotate(180deg);
 }
 
 .chart-description {

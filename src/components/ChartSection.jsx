@@ -37,7 +37,7 @@ export default function ChartSection({ dataFile, title, source, fredIds = [], de
             onClick={() => setDescOpen(prev => !prev)}
             aria-expanded={descOpen}
           >
-            <span className={`arrow-icon ${descOpen ? 'open' : ''}`}>▼</span>
+            <span className="arrow-icon">{descOpen ? '▼' : '▶'}</span>
             {descOpen ? 'Hide description' : 'Show description'}
           </button>
           {descOpen && <p className="chart-description">{description}</p>}
