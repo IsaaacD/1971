@@ -81,8 +81,15 @@ function Header() {
     <header className="site-header">
       <h1 className="site-title">What Happened in 1971?</h1>
       <p className="site-subtitle">
-        “I don’t believe we shall ever have a good money again before we take the thing out of the hands of government, that is, we can’t take it violently out of the hands of government, all we can do is by some sly roundabout way introduce something that they can’t stop.” – F.A. Hayek 1984      </p>
-    </header>
+        “I don’t believe we shall ever have a good money again before we take the thing out of the hands of government, that is, we can’t take it violently out of the hands of government, all we can do is by some sly roundabout way introduce something that they can’t stop.” – F.A. Hayek 1984
+      </p>
+      <p>
+        This site is a tribute to wtfhappenedin1971.com. <br />
+        <a href="https://wtfhappenedin1971.com/" target="_blank" rel="noopener noreferrer">
+          Visit the original WTF Happened in 1971 website
+        </a>
+      </p>
+    </header >
   )
 }
 
