@@ -47,29 +47,19 @@ export default function ChartSection({ dataFile, imageFile, title, source, fredI
 
       {loading && <div className="loading-spinner">Loading...</div>}
       {error && <div className="error-message">{error}</div>}
+      <div className="section-toggles">
+        {imageFile && (
+          <button
+            className="image-toggle"
+            onClick={() => setShowImage(prev => !prev)}
+            aria-pressed={showImage}
+          >
+            {showImage ? 'Chart' : 'Original'}
+          </button>
+        )}
 
-      {data && !loading && (
-        <>
-          {showImage && imageFile ? (
-            <div className="original-image-wrap">
-              <img src={imageFile} alt={title} className="original-image" />
-            </div>
-          ) : (
-            <InteractiveLineChart data={data} interactive={interactive} />
-          )}
-          <div className="section-toggles">
-            {imageFile && (
-              <button
-                className="image-toggle"
-                onClick={() => setShowImage(prev => !prev)}
-                aria-pressed={showImage}
-              >
-                {showImage ? 'Chart' : 'Original'}
-              </button>
-            )}
-
-          </div>
-          {/* <div className="section-toggles">
+      </div>
+      {/* <div className="section-toggles">
             {!showImage && (
               <button
                 className="interactive-toggle"
@@ -80,6 +70,16 @@ export default function ChartSection({ dataFile, imageFile, title, source, fredI
               </button>
             )}
           </div> */}
+      {data && !loading && (
+        <>
+          {showImage && imageFile ? (
+            <div className="original-image-wrap">
+              <img src={imageFile} alt={title} className="original-image" />
+            </div>
+          ) : (
+            <InteractiveLineChart data={data} interactive={interactive} />
+          )}
+
           {source && <div className="source-attribution">Source: {source}</div>}
           {data.unit && <div className="unit-label">Unit: {data.unit}</div>}
 
