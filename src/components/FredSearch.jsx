@@ -1,8 +1,29 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import './FredSearch.css'
+import InteractiveLineChart from './InteractiveLineChart'
 
 const SEARCH_URL = '/api/fred/fred/series/search'
 const OBS_URL = '/api/fred/fred/series/observations'
+
+function parseYear(dateStr) {
+  const d = new Date(dateStr)
+  if (isNaN(d.getTime())) return null
+  return d.getFullYear()
+}
+
+function hashColor(str) {
+  str = str || ''
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    hash = (str.charCodeAt(i) + ((hash << 5) - hash)) | 0
+  }
+  const h = Math.abs(hash) % 360
+  const toHex = (n) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2, '0')
+  const r = 90 + 125 * Math.sin(h * 0.01745)
+  const g = 90 + 125 * Math.sin((h + 120) * 0.01745)
+  const b = 90 + 125 * Math.sin((h + 240) * 0.01745)
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`
+}
 
 function FredSearch() {
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('fred_api_key') || '')
@@ -14,7 +35,7 @@ function FredSearch() {
   const [totalPages, setTotalPages] = useState(1)
   const [selected, setSelected] = useState(null)
   const [seriesInfo, setSeriesInfo] = useState(null)
-  const [observations, setObservations] = useState([])
+  const [chartData, setChartData] = useState(null)
   const [obsLoading, setObsLoading] = useState(false)
   const [freq, setFreq] = useState('')
   const [tagId, setTagId] = useState('')
@@ -43,7 +64,7 @@ function FredSearch() {
     setError('')
     setSelected(null)
     setSeriesInfo(null)
-    setObservations([])
+    setChartData(null)
 
     const params = new URLSearchParams({
       search_text: query,
@@ -78,8 +99,7 @@ function FredSearch() {
   const loadSeries = async (id) => {
     setSelected(id)
     setObsLoading(true)
-    setSeriesInfo(null)
-    setObservations([])
+    setError('')
 
     try {
       const params = new URLSearchParams({
@@ -92,16 +112,49 @@ function FredSearch() {
       const res = await fetch(`${OBS_URL}?${params}`)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
+
+      if (!data.observations) {
+        throw new Error('Unexpected API response — no observations field.')
+      }
+
+      const validObs = data.observations.filter(
+        (o) => o.value !== '.' && o.value !== '' && o.value != null
+      )
+
+      const parsed = validObs.map((o) => ({
+        year: parseYear(o.date),
+        value: parseFloat(o.value)
+      })).filter((p) => p.year != null && !isNaN(p.value))
+
+      console.log('parsed points:', parsed.length, parsed.slice(0, 3))
+
+      const seriesTitle = data.title || results.find(r => r.id === id)?.title || id
+
       setSeriesInfo({
-        id: data.id,
-        title: data.title,
+        id: data.id || id,
+        title: seriesTitle,
         units: data.units,
         frequency: data.frequency,
-        observations: data.observations?.length || 0,
-        firstDate: data.observations?.[0]?.date,
-        lastDate: data.observations?.[data.observations?.length - 1]?.date
+        observations: validObs.length,
+        firstDate: validObs[0]?.date,
+        lastDate: validObs[validObs.length - 1]?.date
       })
-      setObservations(data.observations || [])
+
+      if (parsed.length === 0) {
+        setError('No valid numeric data to chart for this series.')
+        return
+      }
+
+      setChartData({
+        title: seriesTitle,
+        series: [
+          {
+            name: seriesTitle,
+            color: hashColor(seriesTitle),
+            values: parsed
+          }
+        ]
+      })
     } catch (e) {
       setError(`Failed to load series: ${e.message}`)
     } finally {
@@ -126,7 +179,7 @@ function FredSearch() {
   return (
     <div className="fred-search">
       <h2>FRED Series Search</h2>
-      <p className="fred-hint">Search the Federal Reserve Economic Data database. Click a series to load its data.</p>
+      <p className="fred-hint">Search the Federal Reserve Economic Data database. Click a series to view its chart.</p>
 
       <div className="fred-key-row">
         <label>
@@ -230,29 +283,11 @@ function FredSearch() {
             </div>
           </div>
 
-          {obsLoading && <div className="fred-loading">Loading observations...</div>}
+          {obsLoading && <div className="fred-loading">Loading chart data...</div>}
 
-          {observations.length > 0 && !obsLoading && (
-            <div className="fred-obs-table-wrap">
-              <table className="fred-obs-table">
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Value</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {observations.slice(0, 100).map((o, i) => (
-                    <tr key={i}>
-                      <td>{o.date}</td>
-                      <td>{o.value === '.' ? 'N/A' : o.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {observations.length > 100 && (
-                <p className="fred-obs-note">Showing first 100 of {observations.length} observations.</p>
-              )}
+          {chartData && !obsLoading && (
+            <div className="fred-chart-wrap">
+              <InteractiveLineChart key={seriesInfo.id} data={chartData} interactive={true} />
             </div>
           )}
         </div>

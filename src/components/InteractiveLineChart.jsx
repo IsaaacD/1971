@@ -31,6 +31,9 @@ export default function InteractiveLineChart({ data, width, height, interactive 
   useEffect(() => {
     if (!data || !data.series || !svgRef.current) return
 
+    console.log('InteractiveLineChart render:', data.title, data.series.length, 'series,', data.series[0]?.values?.length, 'points')
+    console.log('first 3 values:', data.series[0]?.values?.slice(0, 3))
+
     const svg = d3.select(svgRef.current)
     svg.selectAll('*').remove()
 
@@ -39,7 +42,7 @@ export default function InteractiveLineChart({ data, width, height, interactive 
     const g = svg.append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`)
 
-    const visibleSeries = data.series.filter(s => !hiddenSeries.includes(s.name))
+    const visibleSeries = data.series.filter(s => s.name && !hiddenSeries.includes(s.name))
     const allValues = visibleSeries.flatMap(s => s.values.map(v => v.value))
 
     const years = data.series[0]?.values.map(v => v.year) || []
@@ -253,8 +256,8 @@ export default function InteractiveLineChart({ data, width, height, interactive 
       )}
 
       <div className="chart-legend">
-        {data.series.map(series => (
-          <label key={series.name} style={{ opacity: hiddenSeries.includes(series.name) ? 0.3 : 1 }}>
+        {data.series.filter(s => s.name).map((series, idx) => (
+          <label key={`${series.name}-${idx}`} style={{ opacity: hiddenSeries.includes(series.name) ? 0.3 : 1 }}>
             <input
               type="checkbox"
               checked={!hiddenSeries.includes(series.name)}

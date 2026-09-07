@@ -308,6 +308,14 @@
   background: var(--bg-secondary);
 }
 
+.fred-chart-wrap {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-primary);
+}
+
 .fred-obs-note {
   text-align: center;
   font-size: 0.8rem;
