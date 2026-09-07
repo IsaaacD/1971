@@ -359,31 +359,50 @@ function normalizeToBase(data, baseYear = 1971) {
   }))
 }
 
+async function annualForEntry(s) {
+  if (s.derived) {
+    const [numObs, denObs] = await Promise.all([
+      fetchFredSeries(s.derived.numerator),
+      fetchFredSeries(s.derived.denominator)
+    ])
+    const num = toAnnualData(numObs)
+    const den = toAnnualData(denObs)
+    const denMap = new Map(den.map((d) => [d.year, d.value]))
+    return num
+      .map((d) => ({
+        year: d.year,
+        value: denMap.has(d.year) && denMap.get(d.year) !== 0 ? d.value / denMap.get(d.year) : null
+      }))
+      .filter((d) => d.value != null && isFinite(d.value))
+  }
+  return toAnnualData(await fetchFredSeries(s.fredId))
+}
+
 async function fetchAndSave(config) {
   console.log(`\nFetching: ${config.title}`)
 
   const series = []
 
   for (const s of config.seriesConfig) {
+    const label = s.derived ? `${s.derived.numerator} ÷ ${s.derived.denominator}` : s.fredId
     try {
-      const observations = await fetchFredSeries(s.fredId)
-      const annualData = toAnnualData(observations)
+      const annualData = await annualForEntry(s)
 
       if (annualData.length === 0) {
-        console.warn(`  No data for ${s.name} (${s.fredId})`)
+        console.warn(`  No data for ${s.name} (${label})`)
         continue
       }
 
-      const finalData = config.normalize ? normalizeToBase(annualData) : annualData
+      const finalData = config.normalize ? normalizeToBase(annualData, config.baseYear || 1971) : annualData
       series.push({
         name: s.name,
         color: s.color,
         values: finalData
       })
 
-      console.log(`  OK ${s.name} (${s.fredId}): ${finalData.length} annual points (${finalData[0]?.year}–${finalData[finalData.length-1]?.year})`)
+      console.log(`  OK ${s.name} (${label}): ${finalData.length} annual points (${finalData[0]?.year}–${finalData[finalData.length-1]?.year})`)
     } catch (err) {
-      console.error(`  FAIL ${s.name} (${s.fredId}): ${err.message}`)
+      console.error(`  FAIL ${s.name} (${label}): ${err.message}`)
     }
   }
 

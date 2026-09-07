@@ -31,8 +31,7 @@ export default function InteractiveLineChart({ data, width, height, interactive 
   useEffect(() => {
     if (!data || !data.series || !svgRef.current) return
 
-    console.log('InteractiveLineChart render:', data.title, data.series.length, 'series,', data.series[0]?.values?.length, 'points')
-    console.log('first 3 values:', data.series[0]?.values?.slice(0, 3))
+
 
     const svg = d3.select(svgRef.current)
     svg.selectAll('*').remove()
