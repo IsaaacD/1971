@@ -44,7 +44,8 @@ export default function InteractiveLineChart({ data, width, height, interactive 
     const visibleSeries = data.series.filter(s => s.name && !hiddenSeries.includes(s.name))
     const allValues = visibleSeries.flatMap(s => s.values.map(v => v.value))
 
-    const years = data.series[0]?.values.map(v => v.year) || []
+    const years = visibleSeries.flatMap(s => s.values.map(v => v.year))
+    if (years.length === 0) return
     const minYear = d3.min(years)
     const maxYear = d3.max(years)
 

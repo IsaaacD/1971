@@ -6,6 +6,10 @@ Recreates the economic divergence charts from [wtfhappenedin1971.com](https://wt
 
 All data is fetched from the [FRED API](https://fred.stlouisfed.org/docs/api/fred/) (Federal Reserve Economic Data), which aggregates BLS, BEA, Census, Treasury, and World Bank data.
 
+> **Sourcing other charts?** See [DATA-SOURCING.md](./DATA-SOURCING.md) — the full playbook
+> for reconstructing a chart image from FRED/BLS/BEA, including API quirks, verified
+> series IDs, and the deflation/indexing math (case study: chart 03).
+
 ### Series Reference
 
 | Chart | FRED ID | Series Name | Date Range | Notes |

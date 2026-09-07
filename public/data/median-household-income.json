@@ -1,10 +1,13 @@
 {
-  "title": "Real Median Household Income",
-  "unit": "Index (1971=100)",
+  "title": "Real Household Income by Percentile",
+  "unit": "Index (1973=100 where available, else first year=100)",
+  "note": "Reconstruction of the CBPP chart \"Income Gains Widely Shared in Early Postwar Decades - But Not Since Then\" (Census CPS percentiles P20/P50/P95 of real family income, 1947-2016, 1973=100). FRED/BLS/BEA do not publish those exact CPS percentiles, so the closest available series are used: FRED median household income (1984-), Census Bureau CE-survey bottom/top-20% average incomes as percentile proxies (1984-), BEA personal income per capita (1947-), and BLS average weekly earnings (1964-). Nominal series are deflated with CPI-U. Each series is indexed to 1973=100 when it has 1973 data, otherwise to its first year (1984) = 100; see each series \"baseYear\".",
   "series": [
     {
-      "name": "Real Median Household Income",
-      "color": "#2196F3",
+      "name": "Median household income",
+      "color": "#8D6E63",
+      "source": "World Bank via FRED (MEHOINUSA672N)",
+      "baseYear": 1984,
       "values": [
         {
           "year": 1984,
@@ -169,6 +172,934 @@
         {
           "year": 2024,
           "value": 138.6
+        }
+      ]
+    },
+    {
+      "name": "Top 20% average (95th pct proxy)",
+      "color": "#E53935",
+      "source": "Census Bureau CE survey via FRED (CXUINCBEFTXLB0106M)",
+      "baseYear": 1984,
+      "values": [
+        {
+          "year": 1984,
+          "value": 100
+        },
+        {
+          "year": 1985,
+          "value": 104
+        },
+        {
+          "year": 1986,
+          "value": 103.2
+        },
+        {
+          "year": 1987,
+          "value": 106.6
+        },
+        {
+          "year": 1988,
+          "value": 104.7
+        },
+        {
+          "year": 1989,
+          "value": 112.1
+        },
+        {
+          "year": 1990,
+          "value": 108.1
+        },
+        {
+          "year": 1991,
+          "value": 110.4
+        },
+        {
+          "year": 1992,
+          "value": 109.1
+        },
+        {
+          "year": 1993,
+          "value": 108.1
+        },
+        {
+          "year": 1994,
+          "value": 110.1
+        },
+        {
+          "year": 1995,
+          "value": 107.6
+        },
+        {
+          "year": 1996,
+          "value": 108.6
+        },
+        {
+          "year": 1997,
+          "value": 110.6
+        },
+        {
+          "year": 1998,
+          "value": 114.8
+        },
+        {
+          "year": 1999,
+          "value": 121.7
+        },
+        {
+          "year": 2000,
+          "value": 117.8
+        },
+        {
+          "year": 2001,
+          "value": 121.4
+        },
+        {
+          "year": 2002,
+          "value": 124.3
+        },
+        {
+          "year": 2003,
+          "value": 127.3
+        },
+        {
+          "year": 2004,
+          "value": 128.9
+        },
+        {
+          "year": 2005,
+          "value": 139.4
+        },
+        {
+          "year": 2006,
+          "value": 137
+        },
+        {
+          "year": 2007,
+          "value": 140.7
+        },
+        {
+          "year": 2008,
+          "value": 135.8
+        },
+        {
+          "year": 2009,
+          "value": 135.3
+        },
+        {
+          "year": 2010,
+          "value": 132.9
+        },
+        {
+          "year": 2011,
+          "value": 132.1
+        },
+        {
+          "year": 2012,
+          "value": 134
+        },
+        {
+          "year": 2013,
+          "value": 128.7
+        },
+        {
+          "year": 2014,
+          "value": 134.6
+        },
+        {
+          "year": 2015,
+          "value": 138.2
+        },
+        {
+          "year": 2016,
+          "value": 152.5
+        },
+        {
+          "year": 2017,
+          "value": 141.3
+        },
+        {
+          "year": 2018,
+          "value": 150.4
+        },
+        {
+          "year": 2019,
+          "value": 157.5
+        },
+        {
+          "year": 2020,
+          "value": 155.3
+        },
+        {
+          "year": 2021,
+          "value": 153.9
+        },
+        {
+          "year": 2022,
+          "value": 153.6
+        },
+        {
+          "year": 2023,
+          "value": 159.9
+        },
+        {
+          "year": 2024,
+          "value": 155.3
+        }
+      ]
+    },
+    {
+      "name": "Bottom 20% average (20th pct proxy)",
+      "color": "#1E88E5",
+      "source": "Census Bureau CE survey via FRED (CXUINCBEFTXLB0102M)",
+      "baseYear": 1984,
+      "values": [
+        {
+          "year": 1984,
+          "value": 100
+        },
+        {
+          "year": 1985,
+          "value": 109.5
+        },
+        {
+          "year": 1986,
+          "value": 113.9
+        },
+        {
+          "year": 1987,
+          "value": 133.1
+        },
+        {
+          "year": 1988,
+          "value": 137
+        },
+        {
+          "year": 1989,
+          "value": 151.4
+        },
+        {
+          "year": 1990,
+          "value": 141.5
+        },
+        {
+          "year": 1991,
+          "value": 144.1
+        },
+        {
+          "year": 1992,
+          "value": 139.8
+        },
+        {
+          "year": 1993,
+          "value": 145.2
+        },
+        {
+          "year": 1994,
+          "value": 131.4
+        },
+        {
+          "year": 1995,
+          "value": 135.7
+        },
+        {
+          "year": 1996,
+          "value": 136.8
+        },
+        {
+          "year": 1997,
+          "value": 144.8
+        },
+        {
+          "year": 1998,
+          "value": 144.3
+        },
+        {
+          "year": 1999,
+          "value": 143
+        },
+        {
+          "year": 2000,
+          "value": 146.3
+        },
+        {
+          "year": 2001,
+          "value": 147.2
+        },
+        {
+          "year": 2002,
+          "value": 151.6
+        },
+        {
+          "year": 2003,
+          "value": 146.2
+        },
+        {
+          "year": 2004,
+          "value": 159.2
+        },
+        {
+          "year": 2005,
+          "value": 162.5
+        },
+        {
+          "year": 2006,
+          "value": 162.3
+        },
+        {
+          "year": 2007,
+          "value": 166.6
+        },
+        {
+          "year": 2008,
+          "value": 156.4
+        },
+        {
+          "year": 2009,
+          "value": 150.5
+        },
+        {
+          "year": 2010,
+          "value": 149
+        },
+        {
+          "year": 2011,
+          "value": 143
+        },
+        {
+          "year": 2012,
+          "value": 142.7
+        },
+        {
+          "year": 2013,
+          "value": 136
+        },
+        {
+          "year": 2014,
+          "value": 142.8
+        },
+        {
+          "year": 2015,
+          "value": 151.1
+        },
+        {
+          "year": 2016,
+          "value": 155.6
+        },
+        {
+          "year": 2017,
+          "value": 152.5
+        },
+        {
+          "year": 2018,
+          "value": 147.4
+        },
+        {
+          "year": 2019,
+          "value": 154.3
+        },
+        {
+          "year": 2020,
+          "value": 167.5
+        },
+        {
+          "year": 2021,
+          "value": 159.3
+        },
+        {
+          "year": 2022,
+          "value": 159
+        },
+        {
+          "year": 2023,
+          "value": 167.9
+        },
+        {
+          "year": 2024,
+          "value": 174.2
+        }
+      ]
+    },
+    {
+      "name": "Personal income per capita (mean)",
+      "color": "#43A047",
+      "source": "BEA NIPA via FRED (A792RC0A052NBEA)",
+      "baseYear": 1973,
+      "values": [
+        {
+          "year": 1947,
+          "value": 49.9
+        },
+        {
+          "year": 1948,
+          "value": 50
+        },
+        {
+          "year": 1949,
+          "value": 49
+        },
+        {
+          "year": 1950,
+          "value": 52.9
+        },
+        {
+          "year": 1951,
+          "value": 54.4
+        },
+        {
+          "year": 1952,
+          "value": 55.9
+        },
+        {
+          "year": 1953,
+          "value": 57.8
+        },
+        {
+          "year": 1954,
+          "value": 57.2
+        },
+        {
+          "year": 1955,
+          "value": 60.4
+        },
+        {
+          "year": 1956,
+          "value": 62.8
+        },
+        {
+          "year": 1957,
+          "value": 63.1
+        },
+        {
+          "year": 1958,
+          "value": 62.2
+        },
+        {
+          "year": 1959,
+          "value": 64.4
+        },
+        {
+          "year": 1960,
+          "value": 65.1
+        },
+        {
+          "year": 1961,
+          "value": 66.2
+        },
+        {
+          "year": 1962,
+          "value": 68.6
+        },
+        {
+          "year": 1963,
+          "value": 70.1
+        },
+        {
+          "year": 1964,
+          "value": 73.2
+        },
+        {
+          "year": 1965,
+          "value": 76.9
+        },
+        {
+          "year": 1966,
+          "value": 80.2
+        },
+        {
+          "year": 1967,
+          "value": 82.8
+        },
+        {
+          "year": 1968,
+          "value": 86.4
+        },
+        {
+          "year": 1969,
+          "value": 88.8
+        },
+        {
+          "year": 1970,
+          "value": 89.6
+        },
+        {
+          "year": 1971,
+          "value": 91.6
+        },
+        {
+          "year": 1972,
+          "value": 96.3
+        },
+        {
+          "year": 1973,
+          "value": 100
+        },
+        {
+          "year": 1974,
+          "value": 97.9
+        },
+        {
+          "year": 1975,
+          "value": 97.2
+        },
+        {
+          "year": 1976,
+          "value": 99.9
+        },
+        {
+          "year": 1977,
+          "value": 102.5
+        },
+        {
+          "year": 1978,
+          "value": 105.9
+        },
+        {
+          "year": 1979,
+          "value": 105.2
+        },
+        {
+          "year": 1980,
+          "value": 102.2
+        },
+        {
+          "year": 1981,
+          "value": 102.7
+        },
+        {
+          "year": 1982,
+          "value": 102.7
+        },
+        {
+          "year": 1983,
+          "value": 105.4
+        },
+        {
+          "year": 1984,
+          "value": 110.5
+        },
+        {
+          "year": 1985,
+          "value": 113.3
+        },
+        {
+          "year": 1986,
+          "value": 116.6
+        },
+        {
+          "year": 1987,
+          "value": 118.1
+        },
+        {
+          "year": 1988,
+          "value": 121.9
+        },
+        {
+          "year": 1989,
+          "value": 124.4
+        },
+        {
+          "year": 1990,
+          "value": 124
+        },
+        {
+          "year": 1991,
+          "value": 121.7
+        },
+        {
+          "year": 1992,
+          "value": 124
+        },
+        {
+          "year": 1993,
+          "value": 124.1
+        },
+        {
+          "year": 1994,
+          "value": 125.6
+        },
+        {
+          "year": 1995,
+          "value": 127.7
+        },
+        {
+          "year": 1996,
+          "value": 130
+        },
+        {
+          "year": 1997,
+          "value": 133.2
+        },
+        {
+          "year": 1998,
+          "value": 139.1
+        },
+        {
+          "year": 1999,
+          "value": 141.5
+        },
+        {
+          "year": 2000,
+          "value": 146.3
+        },
+        {
+          "year": 2001,
+          "value": 147
+        },
+        {
+          "year": 2002,
+          "value": 145.8
+        },
+        {
+          "year": 2003,
+          "value": 146.3
+        },
+        {
+          "year": 2004,
+          "value": 149.2
+        },
+        {
+          "year": 2005,
+          "value": 150.6
+        },
+        {
+          "year": 2006,
+          "value": 154.9
+        },
+        {
+          "year": 2007,
+          "value": 157.4
+        },
+        {
+          "year": 2008,
+          "value": 156.4
+        },
+        {
+          "year": 2009,
+          "value": 151
+        },
+        {
+          "year": 2010,
+          "value": 153.4
+        },
+        {
+          "year": 2011,
+          "value": 156.4
+        },
+        {
+          "year": 2012,
+          "value": 159
+        },
+        {
+          "year": 2013,
+          "value": 157.2
+        },
+        {
+          "year": 2014,
+          "value": 161.3
+        },
+        {
+          "year": 2015,
+          "value": 167.3
+        },
+        {
+          "year": 2016,
+          "value": 168.3
+        },
+        {
+          "year": 2017,
+          "value": 171.6
+        },
+        {
+          "year": 2018,
+          "value": 175.2
+        },
+        {
+          "year": 2019,
+          "value": 179.4
+        },
+        {
+          "year": 2020,
+          "value": 188.6
+        },
+        {
+          "year": 2021,
+          "value": 196.9
+        },
+        {
+          "year": 2022,
+          "value": 186.9
+        },
+        {
+          "year": 2023,
+          "value": 189.5
+        },
+        {
+          "year": 2024,
+          "value": 192.7
+        },
+        {
+          "year": 2025,
+          "value": 195.7
+        }
+      ]
+    },
+    {
+      "name": "Avg weekly earnings, production workers",
+      "color": "#FB8C00",
+      "source": "BLS CES via FRED (CES0500000030)",
+      "baseYear": 1973,
+      "values": [
+        {
+          "year": 1964,
+          "value": 91.7
+        },
+        {
+          "year": 1965,
+          "value": 93.9
+        },
+        {
+          "year": 1966,
+          "value": 94.4
+        },
+        {
+          "year": 1967,
+          "value": 94.3
+        },
+        {
+          "year": 1968,
+          "value": 95.4
+        },
+        {
+          "year": 1969,
+          "value": 95.9
+        },
+        {
+          "year": 1970,
+          "value": 94.4
+        },
+        {
+          "year": 1971,
+          "value": 95.9
+        },
+        {
+          "year": 1972,
+          "value": 100.2
+        },
+        {
+          "year": 1973,
+          "value": 100
+        },
+        {
+          "year": 1974,
+          "value": 95.5
+        },
+        {
+          "year": 1975,
+          "value": 92.3
+        },
+        {
+          "year": 1976,
+          "value": 93.4
+        },
+        {
+          "year": 1977,
+          "value": 93.8
+        },
+        {
+          "year": 1978,
+          "value": 93.8
+        },
+        {
+          "year": 1979,
+          "value": 90.6
+        },
+        {
+          "year": 1980,
+          "value": 85.2
+        },
+        {
+          "year": 1981,
+          "value": 83.8
+        },
+        {
+          "year": 1982,
+          "value": 82.4
+        },
+        {
+          "year": 1983,
+          "value": 83.7
+        },
+        {
+          "year": 1984,
+          "value": 83.5
+        },
+        {
+          "year": 1985,
+          "value": 82.4
+        },
+        {
+          "year": 1986,
+          "value": 82.2
+        },
+        {
+          "year": 1987,
+          "value": 81.4
+        },
+        {
+          "year": 1988,
+          "value": 80.4
+        },
+        {
+          "year": 1989,
+          "value": 79.5
+        },
+        {
+          "year": 1990,
+          "value": 77.9
+        },
+        {
+          "year": 1991,
+          "value": 76.7
+        },
+        {
+          "year": 1992,
+          "value": 76.5
+        },
+        {
+          "year": 1993,
+          "value": 76.5
+        },
+        {
+          "year": 1994,
+          "value": 76.8
+        },
+        {
+          "year": 1995,
+          "value": 76.4
+        },
+        {
+          "year": 1996,
+          "value": 76.7
+        },
+        {
+          "year": 1997,
+          "value": 78.3
+        },
+        {
+          "year": 1998,
+          "value": 80.1
+        },
+        {
+          "year": 1999,
+          "value": 81.1
+        },
+        {
+          "year": 2000,
+          "value": 81.2
+        },
+        {
+          "year": 2001,
+          "value": 81.2
+        },
+        {
+          "year": 2002,
+          "value": 82
+        },
+        {
+          "year": 2003,
+          "value": 81.9
+        },
+        {
+          "year": 2004,
+          "value": 81.6
+        },
+        {
+          "year": 2005,
+          "value": 81.1
+        },
+        {
+          "year": 2006,
+          "value": 81.9
+        },
+        {
+          "year": 2007,
+          "value": 82.7
+        },
+        {
+          "year": 2008,
+          "value": 82.2
+        },
+        {
+          "year": 2009,
+          "value": 83.7
+        },
+        {
+          "year": 2010,
+          "value": 85
+        },
+        {
+          "year": 2011,
+          "value": 84.5
+        },
+        {
+          "year": 2012,
+          "value": 84.3
+        },
+        {
+          "year": 2013,
+          "value": 84.7
+        },
+        {
+          "year": 2014,
+          "value": 85.4
+        },
+        {
+          "year": 2015,
+          "value": 87.1
+        },
+        {
+          "year": 2016,
+          "value": 87.8
+        },
+        {
+          "year": 2017,
+          "value": 88.2
+        },
+        {
+          "year": 2018,
+          "value": 88.8
+        },
+        {
+          "year": 2019,
+          "value": 90
+        },
+        {
+          "year": 2020,
+          "value": 94.3
+        },
+        {
+          "year": 2021,
+          "value": 95.4
+        },
+        {
+          "year": 2022,
+          "value": 93.3
+        },
+        {
+          "year": 2023,
+          "value": 93.5
+        },
+        {
+          "year": 2024,
+          "value": 94.3
+        },
+        {
+          "year": 2025,
+          "value": 95.5
+        },
+        {
+          "year": 2026,
+          "value": 96
         }
       ]
     }
