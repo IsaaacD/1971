@@ -1,0 +1,100 @@
+{
+  "title": "Healthcare Cost Per Capita",
+  "unit": "Index (1971=100)",
+  "series": [
+    {
+      "name": "Health Expenditures per Capita",
+      "color": "#e74c3c",
+      "values": [
+        {
+          "year": 2000,
+          "value": 100
+        },
+        {
+          "year": 2001,
+          "value": 107.5
+        },
+        {
+          "year": 2002,
+          "value": 115.7
+        },
+        {
+          "year": 2003,
+          "value": 122.5
+        },
+        {
+          "year": 2004,
+          "value": 130.1
+        },
+        {
+          "year": 2005,
+          "value": 136.9
+        },
+        {
+          "year": 2006,
+          "value": 143.9
+        },
+        {
+          "year": 2007,
+          "value": 151.5
+        },
+        {
+          "year": 2008,
+          "value": 157.2
+        },
+        {
+          "year": 2009,
+          "value": 162.9
+        },
+        {
+          "year": 2010,
+          "value": 168.3
+        },
+        {
+          "year": 2011,
+          "value": 172.9
+        },
+        {
+          "year": 2012,
+          "value": 177.5
+        },
+        {
+          "year": 2013,
+          "value": 180.5
+        },
+        {
+          "year": 2014,
+          "value": 187.4
+        },
+        {
+          "year": 2015,
+          "value": 195.9
+        },
+        {
+          "year": 2016,
+          "value": 202.3
+        },
+        {
+          "year": 2017,
+          "value": 207.4
+        },
+        {
+          "year": 2018,
+          "value": 214.6
+        },
+        {
+          "year": 2019,
+          "value": 224.5
+        },
+        {
+          "year": 2020,
+          "value": 214.9
+        },
+        {
+          "year": 2021,
+          "value": 236.5
+        }
+      ]
+    }
+  ]
+}

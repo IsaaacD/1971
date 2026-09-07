@@ -1,0 +1,306 @@
+{
+  "query": "real earnings production",
+  "results": [
+    {
+      "id": "A261RX1Q020SBEA",
+      "title": "Real gross domestic income",
+      "units": "Billions of Chained 2017 Dollars",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPAI",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Gross Domestic Product",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "M08343USM232SNBR",
+      "title": "Real Average Hourly Earnings, Production Workers, Manufacturing for United States",
+      "units": "1957-1959 Dollars",
+      "freq": "Monthly"
+    },
+    {
+      "id": "CPGDPMA",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Manufacturing",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPF",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Government: Federal",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPFI",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Finance, Insurance, Real Estate, Rental, and Leasing: Finance and Insurance",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPI",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Information",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "RVAAI",
+      "title": "Real Value Added by Gross Domestic Product",
+      "units": "Billions of Chained 2017 Dollars",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPC",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Construction",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPPST",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Professional and Business Services: Professional, Scientific, and Technical Services",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPRL",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Finance, Insurance, Real Estate, Rental, and Leasing: Real Estate and Rental and Leasing",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPGPI",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Private Goods-Producing Industries",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPSL",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Government: State and Local",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPM",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Mining",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPMD",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Manufacturing: Durable Goods",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPAFH",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Agriculture, Forestry, Fishing, and Hunting",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPAERAF",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Arts, Entertainment, Recreation, Accommodation, and Food Services",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPHCSA",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Educational Services, Health Care, and Social Assistance: Health Care and Social Assistance",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPFIRL",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Finance, Insurance, Real Estate, Rental, and Leasing",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPU",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Utilities",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPR",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Retail Trade",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPW",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Wholesale Trade",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPMN",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Manufacturing: Nondurable Goods",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPPBS",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Professional and Business Services",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPOSEG",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Other Services, Except Government",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPMCE",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Professional and Business Services: Management of Companies and Enterprises",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPAF",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Arts, Entertainment, Recreation, Accommodation, and Food Services: Accommodation and Food Services",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPG",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Government",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPPI",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Private Industries",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPES",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Educational Services, Health Care, and Social Assistance: Educational Services",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPAWMS",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Professional and Business Services: Administrative and Waste Management Services",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPAER",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Arts, Entertainment, Recreation, Accommodation, and Food Services: Arts, Entertainment, and Recreation",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "SMU54000005553000030",
+      "title": "Average Weekly Earnings of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Dollars per Week",
+      "freq": "Monthly"
+    },
+    {
+      "id": "SMU54000005553000030SA",
+      "title": "Average Weekly Earnings of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Dollars per Week",
+      "freq": "Monthly"
+    },
+    {
+      "id": "SMU54000005553000030A",
+      "title": "Average Weekly Earnings of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Dollars per Week",
+      "freq": "Annual"
+    },
+    {
+      "id": "SMU54000005553000008",
+      "title": "Average Hourly Earnings of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Dollars per Hour",
+      "freq": "Monthly"
+    },
+    {
+      "id": "SMU54000005553000008SA",
+      "title": "Average Hourly Earnings of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Dollars per Hour",
+      "freq": "Monthly"
+    },
+    {
+      "id": "SMU54000005553000008A",
+      "title": "Average Hourly Earnings of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Dollars per Hour",
+      "freq": "Annual"
+    },
+    {
+      "id": "RGMPFNDTRSTUSMP",
+      "title": "Real Gross Domestic Product: Private Industries: Finance, Insurance, Real Estate, Rental, and Leasing: Finance and Insurance: Funds, Trusts, and Other Financial Vehicles for United States Metropolitan Portion",
+      "units": "Millions of Chained 2009 Dollars",
+      "freq": "Annual"
+    },
+    {
+      "id": "RGMPGOVFEDCIVUSMP",
+      "title": "Real Gross Domestic Product: Government: Federal Civilian for United States Metropolitan Portion",
+      "units": "Millions of Chained 2009 Dollars",
+      "freq": "Annual"
+    },
+    {
+      "id": "CPGDPT",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Transportation and Warehousing",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPSPI",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Private Services-Producing Industries",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "CPGDPESHS",
+      "title": "Contributions to Percent Change in Real GDP by Industry: Educational Services, Health Care, and Social Assistance",
+      "units": "Percentage Points",
+      "freq": "Quarterly"
+    },
+    {
+      "id": "QGMPFNDTRSTUSMP",
+      "title": "Quantity Indexes for Real GDP: Private Industries: Finance, Insurance, Real Estate, Rental, and Leasing: Finance and Insurance: Funds, Trusts, and Other Financial Vehicles for United States Metropolitan Portion",
+      "units": "Index 2009=100",
+      "freq": "Annual"
+    },
+    {
+      "id": "QGMPGOVFEDCIVUSMP",
+      "title": "Quantity Indexes for Real GDP: Government: Federal Civilian for United States Metropolitan Portion",
+      "units": "Index 2009=100",
+      "freq": "Annual"
+    },
+    {
+      "id": "SMU54000005553000007SA",
+      "title": "Average Weekly Hours of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Hours per Week",
+      "freq": "Monthly"
+    },
+    {
+      "id": "SMU54000005553000007",
+      "title": "Average Weekly Hours of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Hours per Week",
+      "freq": "Monthly"
+    },
+    {
+      "id": "SMU54000005553000007A",
+      "title": "Average Weekly Hours of Production Employees: Real Estate and Rental and Leasing in West Virginia (DISCONTINUED)",
+      "units": "Hours per Week",
+      "freq": "Annual"
+    },
+    {
+      "id": "N4165C0A144NBEA",
+      "title": "Wage and salary accruals: Domestic private industries: Real estate",
+      "units": "Millions of Dollars",
+      "freq": "Annual"
+    },
+    {
+      "id": "J4158C0A144NBEA",
+      "title": "Wage and salary accruals: Domestic private industries: Real estate",
+      "units": "Millions of Dollars",
+      "freq": "Annual"
+    }
+  ],
+  "timestamp": "2026-09-03T18:27:54.432Z"
+}

@@ -1,0 +1,124 @@
+{
+  "title": "CO2 Emissions",
+  "unit": "Index (1971=100)",
+  "series": [
+    {
+      "name": "Per Capita Energy Consumption",
+      "color": "#9b59b6",
+      "values": [
+        {
+          "year": 1997,
+          "value": 100
+        },
+        {
+          "year": 1998,
+          "value": 88.6
+        },
+        {
+          "year": 1999,
+          "value": 96.9
+        },
+        {
+          "year": 2000,
+          "value": 120.7
+        },
+        {
+          "year": 2001,
+          "value": 115.3
+        },
+        {
+          "year": 2002,
+          "value": 107.7
+        },
+        {
+          "year": 2003,
+          "value": 124.9
+        },
+        {
+          "year": 2004,
+          "value": 146.7
+        },
+        {
+          "year": 2005,
+          "value": 177.1
+        },
+        {
+          "year": 2006,
+          "value": 197.6
+        },
+        {
+          "year": 2007,
+          "value": 211.6
+        },
+        {
+          "year": 2008,
+          "value": 237.3
+        },
+        {
+          "year": 2009,
+          "value": 172.7
+        },
+        {
+          "year": 2010,
+          "value": 200.7
+        },
+        {
+          "year": 2011,
+          "value": 244.8
+        },
+        {
+          "year": 2012,
+          "value": 247.6
+        },
+        {
+          "year": 2013,
+          "value": 245.6
+        },
+        {
+          "year": 2014,
+          "value": 237.5
+        },
+        {
+          "year": 2015,
+          "value": 182.8
+        },
+        {
+          "year": 2016,
+          "value": 163.3
+        },
+        {
+          "year": 2017,
+          "value": 183
+        },
+        {
+          "year": 2018,
+          "value": 205.9
+        },
+        {
+          "year": 2019,
+          "value": 196.9
+        },
+        {
+          "year": 2020,
+          "value": 143.7
+        },
+        {
+          "year": 2021,
+          "value": 214.4
+        },
+        {
+          "year": 2022,
+          "value": 284.3
+        },
+        {
+          "year": 2023,
+          "value": 254.6
+        },
+        {
+          "year": 2024,
+          "value": 238.9
+        }
+      ]
+    }
+  ]
+}

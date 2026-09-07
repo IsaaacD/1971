@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react'
 import InteractiveLineChart from './InteractiveLineChart'
 import { useData } from '../hooks/useData'
 
-export default function ChartSection({ dataFile, imageFile, title, source, fredIds = [], description = '' }) {
+export default function ChartSection({ dataFile, imageFile, title, source, fredIds = [], description = '', chartNumber }) {
   const [revealed, setRevealed] = useState(false)
   const [interactive, setInteractive] = useState(false)
   const [descOpen, setDescOpen] = useState(false)
@@ -29,6 +29,7 @@ export default function ChartSection({ dataFile, imageFile, title, source, fredI
       ref={ref}
       className={`chart-section ${revealed ? 'revealed' : ''}`}
     >
+      {chartNumber && <span className="chart-number">{String(chartNumber).padStart(2, '0')}</span>}
       <h2>{title || data?.title}</h2>
 
       {description && (

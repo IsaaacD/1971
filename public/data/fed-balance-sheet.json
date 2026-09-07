@@ -1,0 +1,112 @@
+{
+  "title": "Federal Reserve Total Assets",
+  "unit": "Index (1971=100)",
+  "series": [
+    {
+      "name": "Total Assets Federal Reserve",
+      "color": "#e74c3c",
+      "values": [
+        {
+          "year": 2002,
+          "value": 100
+        },
+        {
+          "year": 2003,
+          "value": 101.8
+        },
+        {
+          "year": 2004,
+          "value": 106.8
+        },
+        {
+          "year": 2005,
+          "value": 112.2
+        },
+        {
+          "year": 2006,
+          "value": 116.5
+        },
+        {
+          "year": 2007,
+          "value": 120.2
+        },
+        {
+          "year": 2008,
+          "value": 165.5
+        },
+        {
+          "year": 2009,
+          "value": 287.1
+        },
+        {
+          "year": 2010,
+          "value": 319.3
+        },
+        {
+          "year": 2011,
+          "value": 378.6
+        },
+        {
+          "year": 2012,
+          "value": 395.1
+        },
+        {
+          "year": 2013,
+          "value": 479.4
+        },
+        {
+          "year": 2014,
+          "value": 597.6
+        },
+        {
+          "year": 2015,
+          "value": 618.3
+        },
+        {
+          "year": 2016,
+          "value": 616.2
+        },
+        {
+          "year": 2017,
+          "value": 614.8
+        },
+        {
+          "year": 2018,
+          "value": 590.3
+        },
+        {
+          "year": 2019,
+          "value": 541.6
+        },
+        {
+          "year": 2020,
+          "value": 872.5
+        },
+        {
+          "year": 2021,
+          "value": 1114.8
+        },
+        {
+          "year": 2022,
+          "value": 1216.9
+        },
+        {
+          "year": 2023,
+          "value": 1135.4
+        },
+        {
+          "year": 2024,
+          "value": 1000.8
+        },
+        {
+          "year": 2025,
+          "value": 919.6
+        },
+        {
+          "year": 2026,
+          "value": 921.1
+        }
+      ]
+    }
+  ]
+}
